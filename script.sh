@@ -1,3 +1,6 @@
+sudo apt update
+sudo apt upgrade
+
 # Install git
 sudo apt install git
 
@@ -25,6 +28,10 @@ code --install-extension dracula-theme.theme-dracula
 code --install-extension mikestead.dotenv
 code --install-extension kamikillerto.vscode-colorize
 code --install-extension pkief.material-icon-theme
+code --install-extension davidanson.vscode-markdownlint
+code --install-extension christian-kohler.npm-intellisense
+code --install-extension eg2.vscode-npm-script
+# code --install-extension ms-vscode.cpptools
 
 # Install Latte Dock
 sudo add-apt-repository ppa:rikmills/latte-dock
@@ -65,7 +72,8 @@ sudo apt install xclip
 # Gera SSH to github
 ssh-keygen -t rsa -b 4096 -C "delimaalefe@gmail.com"
 eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/id_rsa
+# ssh-add ~/.ssh/id_rsa
+ssh-add -k ~/.ssh/id_rsa
 xclip -sel clip < ~/.ssh/id_rsa.pub
 
 # Install Java
