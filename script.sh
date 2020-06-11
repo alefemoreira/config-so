@@ -15,7 +15,7 @@ sudo snap install code --classic
 
 # Settings do VSCode
 # Install Fira Code
-cp FiraCode/otf /usr/share/fonts/opentype
+sudo cp FiraCode/otf /usr/share/fonts/opentype
 
 # Install arquivos de configurações VSCode
 cp vscode/keybindings.json /home/aldebaran/.config/Code/User/
@@ -31,7 +31,8 @@ code --install-extension pkief.material-icon-theme
 code --install-extension davidanson.vscode-markdownlint
 code --install-extension christian-kohler.npm-intellisense
 code --install-extension eg2.vscode-npm-script
-# code --install-extension ms-vscode.cpptools
+code --install-extension ms-vscode.cpptools
+code --install-extension danielpinto8zz6.c-cpp-compile-run
 
 # Install Latte Dock
 sudo add-apt-repository ppa:rikmills/latte-dock
@@ -69,8 +70,11 @@ echo "export PATH="$PATH:`yarn global bin`"" >> ~/.bashrc
 # Install XCLip
 sudo apt install xclip
 
+echo "Enter your email: "
+read email
+
 # Gera SSH to github
-ssh-keygen -t rsa -b 4096 -C "delimaalefe@gmail.com"
+ssh-keygen -t rsa -b 4096 -C "$email"
 eval "$(ssh-agent -s)"
 # ssh-add ~/.ssh/id_rsa
 ssh-add -k ~/.ssh/id_rsa
