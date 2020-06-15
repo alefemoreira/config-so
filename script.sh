@@ -1,8 +1,15 @@
 sudo apt update
 sudo apt upgrade
+# if kde neon = `sudo pkcon update`
+
+# Up to Watch Files
+echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc sysctl.conf && sudo sysctl -p
 
 # Install git
 sudo apt install git
+
+# Install ViM
+sudo apt install vim
 
 # Config Git
 cp git/.gitconfig ~/
@@ -97,6 +104,14 @@ sudo snap install intellij-idea-community --classic
 
 # Install Insomnia
 sudo snap install insomnia
+
+# install fish
+#sudo apt-add-repository ppa:fish-shell/release-3 
+#sudo apt-get update && sudo apt-get upgrade
+#sudo apt-get install fish 
+#sudo chsh -s /usr/bin/fish
+
+# get back - sudo chsh -s 'which bash'
 
 echo "NOW INSTALL:
   * Android Studio
