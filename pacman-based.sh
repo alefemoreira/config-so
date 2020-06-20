@@ -1,5 +1,5 @@
+#TELA ICONS
 sudo pacman -Syu
-
 #sudo pacman -Syy
 #sudo pacman -Su
 
